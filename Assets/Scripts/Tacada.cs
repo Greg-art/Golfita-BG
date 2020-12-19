@@ -5,52 +5,55 @@ using UnityEngine;
 public class Tacada : MonoBehaviour
 {
 
-    [SerializeField]private float _maxX, _maxY;
-    private float _x, _y;
-    private Vector2 _pi;
-    private Vector2 _pf;
-    LineRenderer lr;
+    [SerializeField] private float _maxForceX, _maxForceY;
+
+    private float _forceX, _forceY;
+    private Vector2 _initialTouchPosition;
+    private Vector2 _lastTouchPosition;
+    private LineRenderer _lineRenderer;
 
     void Start()
     {
-        lr = GetComponent<LineRenderer>();
-        lr.enabled = false;
+        _lineRenderer = GetComponent<LineRenderer>();
+        _lineRenderer.enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        int i;
-        for(i = 0; i < Input.touchCount; i++){
-            Touch t = Input.GetTouch(i);
-            if(t.phase == TouchPhase.Began){
-                _pi = t.position;
-                _pf = t.position;
-                _x = 0;
-                _y = 0;
-                lr.enabled = true;
-                lr.SetPosition(0, transform.position);
-                lr.SetPosition(1, transform.position);
-            } 
-            if(t.phase == TouchPhase.Moved){
-                _pf = t.position;
+        int currentTouch;
+        for (currentTouch = 0; currentTouch < Input.touchCount; currentTouch++)
+        {
+            Touch touch = Input.GetTouch(currentTouch);
+            if (touch.phase == TouchPhase.Began)
+            {
+                _initialTouchPosition = touch.position;
+                _lastTouchPosition = touch.position;
+                _forceX = 0;
+                _forceY = 0;
+                _lineRenderer.enabled = true;
+                _lineRenderer.SetPosition(0, transform.position);
+                _lineRenderer.SetPosition(1, transform.position);
+            }
+            if (touch.phase == TouchPhase.Moved)
+            {
+                _lastTouchPosition = touch.position;
 
-                _x = (_pi.x - _pf.x) * 1.0f;
-                _y = (_pi.y - _pf.y) * 1.0f;
+                _forceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 0.03f;
+                _forceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 0.03f;
 
-                if(_x > _maxX)
-                    _x = _maxX;
-                if(_y > _maxY)
-                    _y = _maxY;
+                if (_forceX > _maxForceX)
+                    _forceX = _maxForceX;
+                if (_forceY > _maxForceY)
+                    _forceY = _maxForceY;
 
-                lr.SetPosition(1, new Vector3(transform.position.x + _x, transform.position.y, transform.position.z + _y ));
+                _lineRenderer.SetPosition(1, new Vector3(transform.position.x + _forceX, transform.position.y, transform.position.z + _forceY));
             }
 
-            if(t.phase == TouchPhase.Ended){
-                GetComponent<Rigidbody>().AddForce(new Vector3(2 * _x, 0, 2 * _y));
-                lr.enabled = false;
+            if (touch.phase == TouchPhase.Ended)
+            {
+                GetComponent<Rigidbody>().AddForce(new Vector3(2 * _forceX, 0, 2 * _forceY));
+                _lineRenderer.enabled = false;
             }
-
         }
     }
 }
