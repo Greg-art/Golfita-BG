@@ -35,8 +35,8 @@ public class GolfBallInput : MonoBehaviour
             {
                 _lastTouchPosition = touch.position;
 
-                float newForceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 0.03f;
-                float newForceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 0.03f;
+                float newForceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 1f;
+                float newForceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 1f;
                 _forceHandler.SetForces(newForceX, newForceY);
 
                 _lineRenderer.UpdateLinePoint(newForceX, newForceY);

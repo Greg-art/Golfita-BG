@@ -16,7 +16,6 @@ public class CameraSmoothFollow : MonoBehaviour
     {
         if (!_target) return;
 
-        // Calculate the current rotation angles
         float wantedRotationAngle = _target.eulerAngles.y;
         float wantedHeight = _target.position.y + _cameraHeightAboveTarget;
 
