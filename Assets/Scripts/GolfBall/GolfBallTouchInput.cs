@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GolfBallInput : MonoBehaviour
+public class GolfBallTouchInput : MonoBehaviour
 {
     private Vector2 _initialTouchPosition;
     private Vector2 _lastTouchPosition;
