@@ -11,7 +11,6 @@ public class ScoreManager : MonoBehaviour
     private int _totalScore;
     private int _currentTotalShots = 0;
     private int _currentSceneIndex;
-    //associar par com build index
     private int _currentScenePar = -1;
 
     public static ScoreManager Instance;
@@ -33,8 +32,6 @@ public class ScoreManager : MonoBehaviour
         }
 
         //código pra resgatar playerprefs
-
-        // pegar pares
     }
 
     public void UpdateShotAmount()
