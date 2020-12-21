@@ -8,6 +8,7 @@ public class Interface : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _scoreDisplay = default;
     [SerializeField] private TextMeshProUGUI _parDisplay = default;
     [SerializeField] private TextMeshProUGUI _shotsDisplay = default;
+    [SerializeField] private TextMeshProUGUI _shotNameDisplay = default;
 
     void Start()
     {
