@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
 
     private int _currentScore;
     private int _totalScore;
+    private int _currentHighScore = 0;
     private int _currentSceneIndex;
     public int _currentScenePar = -1;
 
@@ -30,12 +31,17 @@ public class ScoreManager : MonoBehaviour
             _currentScenePar = _parList[_currentSceneIndex];
         }
 
-        //código pra resgatar playerprefs
+        _currentHighScore = PlayerPrefs.GetInt("highScore", 0);
     }
 
     public void GetLevelScore(int shotAmount)
     {
         _currentScore = shotAmount - ScoreManager.Instance._currentScenePar;
         _totalScore += _currentScore;
+        if (_currentScore > _currentHighScore)
+        {
+            PlayerPrefs.SetInt("highScore", _currentScore);
+            _currentHighScore = _currentScore;
+        }
     }
 }
