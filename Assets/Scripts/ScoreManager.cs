@@ -39,6 +39,6 @@ public class ScoreManager : MonoBehaviour
 
     public void UpdateShotAmount()
     {
-        _currentScore++;
+        _currentTotalShots++;
     }
 }

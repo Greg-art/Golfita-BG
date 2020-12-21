@@ -41,6 +41,7 @@ public class GolfBallMouseInput : MonoBehaviour
         {
             _forceHandler.ApplyForce();
             _lineRenderer.SetRendererActive(false);
+            ScoreManager.Instance.UpdateShotAmount();
         }
     }
 }
