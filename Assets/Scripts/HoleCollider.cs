@@ -8,8 +8,8 @@ public class HoleCollider : MonoBehaviour
     {
         if (other.GetComponent<GolfBallShotHandler>() != null)
         {
-            Debug.Log("caiu");
+            GolfBallShotHandler shotHandler = other.GetComponent<GolfBallShotHandler>();
+            shotHandler.RegisterShotAmount();
         }
-
     }
 }

@@ -9,9 +9,8 @@ public class ScoreManager : MonoBehaviour
 
     private int _currentScore;
     private int _totalScore;
-    private int _currentTotalShots = 0;
     private int _currentSceneIndex;
-    private int _currentScenePar = -1;
+    public int _currentScenePar = -1;
 
     public static ScoreManager Instance;
 
@@ -34,8 +33,9 @@ public class ScoreManager : MonoBehaviour
         //código pra resgatar playerprefs
     }
 
-    public void UpdateShotAmount()
+    public void GetLevelScore(int shotAmount)
     {
-        _currentTotalShots++;
+        _currentScore = shotAmount - ScoreManager.Instance._currentScenePar;
+        _totalScore += _currentScore;
     }
 }
