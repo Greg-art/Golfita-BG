@@ -8,11 +8,13 @@ public class GolfBallMouseInput : MonoBehaviour
     private Vector2 _lastTouchPosition;
     private GolfBallForceHandler _forceHandler;
     private GolfBallLineRenderer _lineRenderer;
+    private GolfBallShotHandler _shotHandler;
 
     void Start()
     {
         _lineRenderer = GetComponent<GolfBallLineRenderer>();
         _forceHandler = GetComponent<GolfBallForceHandler>();
+        _shotHandler = GetComponent<GolfBallShotHandler>();
     }
 
     void Update()
@@ -41,6 +43,7 @@ public class GolfBallMouseInput : MonoBehaviour
         {
             _forceHandler.ApplyForce();
             _lineRenderer.SetRendererActive(false);
+            _shotHandler.UpdateShotAmount();
         }
     }
 }
