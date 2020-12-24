@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class GolfBallShotHandler : MonoBehaviour
 {
-    private int _currentTotalShots = 0;
+    public int CurrentTotalShots = 0;
 
     public void UpdateShotAmount()
     {
-        _currentTotalShots++;
+        CurrentTotalShots++;
     }
 
     public void RegisterShotAmount()
     {
-        ScoreManager.Instance.GetLevelScore(_currentTotalShots);
+        ScoreManager.Instance.GetLevelScore(CurrentTotalShots);
     }
 }

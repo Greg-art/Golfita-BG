@@ -8,9 +8,9 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int[] _parList; //inicialmente com 4
 
     private int _currentScore;
-    private int _totalScore;
     private int _currentHighScore = 0;
     private int _currentSceneIndex;
+    public int _totalScore;
     public int _currentScenePar = -1;
 
     public static ScoreManager Instance;
