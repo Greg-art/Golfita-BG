@@ -16,8 +16,8 @@ public class Interface : MonoBehaviour
 
     void Start()
     {
-        UpdateScoreDisplay(ScoreManager.Instance._totalScore);
-        UpdateParDisplay(ScoreManager.Instance._currentScenePar);
+        UpdateScoreDisplay(ScoreManager.Instance.TotalScore);
+        UpdateParDisplay(ScoreManager.Instance.CurrentScenePar);
     }
 
     public void UpdateShotsDisplay(int shotAmount)

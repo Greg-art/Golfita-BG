@@ -566,8 +566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parList: 030000000700000005000000
-  _totalScore: 0
-  _currentScenePar: -1
+  ScoreName: 
+  TotalScore: 0
+  CurrentScenePar: -1
 --- !u!4 &809588152
 Transform:
   m_ObjectHideFlags: 0
@@ -998,7 +999,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8579327176170128973}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1404564928
+--- !u!114 &1404564930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

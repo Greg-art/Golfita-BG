@@ -10,8 +10,10 @@ public class ScoreManager : MonoBehaviour
     private int _currentScore;
     private int _currentHighScore = 0;
     private int _currentSceneIndex;
-    public int _totalScore;
-    public int _currentScenePar = -1;
+
+    public string ScoreName;
+    public int TotalScore;
+    public int CurrentScenePar = -1;
 
     public static ScoreManager Instance;
 
@@ -35,17 +37,51 @@ public class ScoreManager : MonoBehaviour
     private void SetupLevel()
     {
         ScoreManager.Instance._currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        _currentScenePar = _parList[_currentSceneIndex];
+        CurrentScenePar = _parList[_currentSceneIndex];
     }
 
     public void GetLevelScore(int shotAmount)
     {
-        _currentScore = shotAmount - ScoreManager.Instance._currentScenePar;
-        _totalScore += _currentScore;
+        _currentScore = shotAmount - ScoreManager.Instance.CurrentScenePar;
+        TotalScore += _currentScore;
+
+        ScoreName = GetScoreName(_currentScore);
+
         if (_currentScore > _currentHighScore)
         {
             PlayerPrefs.SetInt("highScore", _currentScore);
             _currentHighScore = _currentScore;
+        }
+    }
+
+    private string GetScoreName(int currentScore)
+    {
+        switch (currentScore)
+        {
+            case -2:
+                return "Eagle";
+
+            case -1:
+                return "Birdie";
+
+            case 0:
+                return "Par";
+
+            case 1:
+                return "Bogey";
+
+            case 2:
+                return "Double Bogey";
+
+            default:
+                if (currentScore <= -3)
+                {
+                    return "Albatross";
+                }
+                else
+                {
+                    return "Triple Bogey";
+                }
         }
     }
 }
