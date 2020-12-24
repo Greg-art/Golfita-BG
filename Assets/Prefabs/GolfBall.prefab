@@ -202,8 +202,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.13995194, g: 0.49951953, b: 0.8018868, a: 1}
-      key1: {r: 0, g: 0.09038353, b: 1, a: 1}
+      key0: {r: 1, g: 0, b: 0.7319846, a: 1}
+      key1: {r: 0, g: 0, b: 0.7319846, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -288,3 +288,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3af42b9ecce0c43870157a1104254c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _interface: {fileID: 0}

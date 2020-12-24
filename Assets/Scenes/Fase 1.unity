@@ -299,7 +299,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parList: 030000000700000005000000
-  _currentScenePar: -1
+  ScoreName: 
+  TotalScore: 0
+  CurrentScenePar: -1
 --- !u!4 &809588152
 Transform:
   m_ObjectHideFlags: 0
@@ -456,6 +458,18 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1064354512 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3358676578031903621, guid: dc2877c1c9d206549810af6e2e51fe61,
+    type: 3}
+  m_PrefabInstance: {fileID: 3358676577406986541}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa28ae7c8094cf340ac7ca928b7de5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1322334191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 233859461, guid: dc2877c1c9d206549810af6e2e51fe61,
@@ -684,36 +698,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2117683420 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4285446353096740859, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-    type: 3}
-  m_PrefabInstance: {fileID: 4285446352344536271}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2117683421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117683420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e855abf50f93dcb45b796c42ef1f64a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2117683422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117683420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee3af42b9ecce0c43870157a1104254c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1807915872269675164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -891,6 +875,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2117683422, guid: 101cea4f56fdcaa48927c16a0e6ba29e, type: 3}
+      propertyPath: _interface
+      value: 
+      objectReference: {fileID: 1064354512}
     - target: {fileID: 4285446353096740852, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -945,51 +933,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285446353096740854, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2f468f7022adeba42b187a569227b183, type: 2}
-    - target: {fileID: 4285446353096740856, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285446353096740858, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_UseWorldSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285446353096740858, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285446353096740858, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285446353096740858, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Parameters.colorGradient.key0.b
-      value: 0.7319846
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285446353096740858, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Parameters.colorGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285446353096740858, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4285446353096740858, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Parameters.colorGradient.key1.b
-      value: 0.7319846
       objectReference: {fileID: 0}
     - target: {fileID: 4285446353096740859, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}

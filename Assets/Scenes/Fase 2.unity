@@ -293,7 +293,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parList: 030000000700000005000000
-  _currentScenePar: -1
+  ScoreName: 
+  TotalScore: 0
+  CurrentScenePar: -1
 --- !u!4 &809588152
 Transform:
   m_ObjectHideFlags: 0
@@ -878,6 +880,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc2877c1c9d206549810af6e2e51fe61, type: 3}
+--- !u!114 &3358676577406986542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3358676578031903621, guid: dc2877c1c9d206549810af6e2e51fe61,
+    type: 3}
+  m_PrefabInstance: {fileID: 3358676577406986541}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa28ae7c8094cf340ac7ca928b7de5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4285446352344536271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -885,6 +899,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2117683422, guid: 101cea4f56fdcaa48927c16a0e6ba29e, type: 3}
+      propertyPath: _interface
+      value: 
+      objectReference: {fileID: 3358676577406986542}
     - target: {fileID: 4285446353096740852, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}
       propertyPath: m_LocalPosition.x
