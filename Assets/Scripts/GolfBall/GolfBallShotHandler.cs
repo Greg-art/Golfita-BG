@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class GolfBallShotHandler : MonoBehaviour
 {
-    public int CurrentTotalShots = 0;
+    private int _currentTotalShots = 0;
+
+    [SerializeField] private Interface _interface = default;
+
+    private void Awake()
+    {
+        _interface.UpdateShotsDisplay(_currentTotalShots);
+    }
 
     public void UpdateShotAmount()
     {
-        CurrentTotalShots++;
+        _currentTotalShots++;
+        _interface.UpdateShotsDisplay(_currentTotalShots);
     }
 
     public void RegisterShotAmount()
     {
-        ScoreManager.Instance.GetLevelScore(CurrentTotalShots);
+        ScoreManager.Instance.GetLevelScore(_currentTotalShots);
+        _interface.UpdateShotNameDisplay(_currentTotalShots);
+        _interface.UpdateScoreDisplay(ScoreManager.Instance._totalScore);
     }
 }

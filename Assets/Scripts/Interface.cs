@@ -12,29 +12,31 @@ public class Interface : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _shotsDisplay = default;
     [SerializeField] private TextMeshProUGUI _shotNameDisplay = default;
     [SerializeField] private Image imagem = default;
-    [SerializeField] private GolfBallShotHandler _shotHandler = default;
 
 
     void Start()
     {
-
-        _scoreDisplay.SetText($"Pontuação Total: {ScoreManager.Instance._totalScore}");
-        _parDisplay.SetText($"Par: {ScoreManager.Instance._currentScenePar}");
-        if (_shotHandler != null)
-        {
-            _shotsDisplay.SetText($"Tacadas: {_shotHandler.CurrentTotalShots}");
-        }
-
-        _shotNameDisplay.SetText($"ALBATROZ");
-
-
-        //PlayerPrefs.SetInt("points", _currentScore);
+        UpdateScoreDisplay(ScoreManager.Instance._totalScore);
+        UpdateParDisplay(ScoreManager.Instance._currentScenePar);
     }
 
-    public void UpdateDisplayedText()
+    public void UpdateShotsDisplay(int shotAmount)
     {
-        _scoreDisplay.SetText($"Pontuação Total: 0");
-        _shotsDisplay.SetText($"Tacadas: 0");
+        _shotsDisplay.SetText($"Tacadas: {shotAmount}");
+    }
+
+    public void UpdateScoreDisplay(int totalScore)
+    {
+        _scoreDisplay.SetText($"Pontuação Total: {totalScore}");
+    }
+
+    public void UpdateShotNameDisplay(int score)
+    {
         _shotNameDisplay.SetText($"ALBATROZ");
+    }
+
+    public void UpdateParDisplay(int par)
+    {
+        _parDisplay.SetText($"Par: {par}");
     }
 }

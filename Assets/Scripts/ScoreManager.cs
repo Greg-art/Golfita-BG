@@ -19,19 +19,23 @@ public class ScoreManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            ScoreManager.Instance._currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            _currentScenePar = _parList[_currentSceneIndex];
+            SetupLevel();
             Destroy(gameObject);
         }
         else
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            ScoreManager.Instance._currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            _currentScenePar = _parList[_currentSceneIndex];
+            SetupLevel();
         }
 
         _currentHighScore = PlayerPrefs.GetInt("highScore", 0);
+    }
+
+    private void SetupLevel()
+    {
+        ScoreManager.Instance._currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        _currentScenePar = _parList[_currentSceneIndex];
     }
 
     public void GetLevelScore(int shotAmount)
