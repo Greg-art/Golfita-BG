@@ -16,19 +16,27 @@ public class Interface : MonoBehaviour
 
     void Start()
     {
-        
-        _scoreDisplay.SetText($"Pontuação Total: 0");
-        _shotsDisplay.SetText($"Tacadas: 0");
-        _parDisplay.SetText($"Par: 0");
-        _shotNameDisplay.SetText($"ALBATROZ");
-
-
-        //PlayerPrefs.SetInt("points", _currentScore);
+        UpdateScoreDisplay(ScoreManager.Instance.TotalScore);
+        UpdateParDisplay(ScoreManager.Instance.CurrentScenePar);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateShotsDisplay(int shotAmount)
     {
-        
+        _shotsDisplay.SetText($"Tacadas: {shotAmount}");
+    }
+
+    public void UpdateScoreDisplay(int totalScore)
+    {
+        _scoreDisplay.SetText($"Pontuação Total: {totalScore}");
+    }
+
+    public void UpdateShotNameDisplay(string scoreName)
+    {
+        _shotNameDisplay.SetText(scoreName);
+    }
+
+    public void UpdateParDisplay(int par)
+    {
+        _parDisplay.SetText($"Par: {par}");
     }
 }

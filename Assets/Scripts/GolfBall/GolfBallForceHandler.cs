@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GolfBallForceHandler : MonoBehaviour
 {
-    [SerializeField] private float _maxForceX, _maxForceY;
-    private float _forceX, _forceY;
+    [SerializeField] private float _maxForceX, _maxForceY = 250f;
+    [SerializeField] private float _forceMultiplier = 10f;
+    private float _forceX, _forceY = 10f;
     private Rigidbody _rigidbody;
 
     void Awake()
@@ -20,13 +21,19 @@ public class GolfBallForceHandler : MonoBehaviour
 
         if (newX > _maxForceX)
             _forceX = _maxForceX;
+        else if(newX < (_maxForceX * -1))
+            _forceX = _maxForceX * -1;
+
         if (newY > _maxForceY)
-            _forceX = _maxForceY;
+            _forceY = _maxForceY;
+        else if(newY < (_maxForceY * -1))
+            _forceY = _maxForceY;
+        
     }
 
     public void ApplyForce()
     {
-        Vector3 forceToApply = new Vector3(2 * _forceX, 0, 2 * _forceY);
+        Vector3 forceToApply = new Vector3(_forceX * _forceMultiplier , 0, _forceY * _forceMultiplier);
         _rigidbody.AddForce(forceToApply);
     }
 }

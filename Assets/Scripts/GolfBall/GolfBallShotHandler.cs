@@ -6,13 +6,23 @@ public class GolfBallShotHandler : MonoBehaviour
 {
     private int _currentTotalShots = 0;
 
+    [SerializeField] private Interface _interface = default;
+
+    private void Awake()
+    {
+        _interface.UpdateShotsDisplay(_currentTotalShots);
+    }
+
     public void UpdateShotAmount()
     {
         _currentTotalShots++;
+        _interface.UpdateShotsDisplay(_currentTotalShots);
     }
 
     public void RegisterShotAmount()
     {
         ScoreManager.Instance.GetLevelScore(_currentTotalShots);
+        _interface.UpdateShotNameDisplay(ScoreManager.Instance.ScoreName);
+        _interface.UpdateScoreDisplay(ScoreManager.Instance.TotalScore);
     }
 }

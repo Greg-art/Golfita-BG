@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 4285446353096740858}
   - component: {fileID: 2020463650089097002}
   - component: {fileID: 6961595339872301466}
+  - component: {fileID: 2117683421}
+  - component: {fileID: 2117683422}
   m_Layer: 0
   m_Name: GolfBall
   m_TagString: Untagged
@@ -65,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2f468f7022adeba42b187a569227b183, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -200,8 +202,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0, b: 0.7319846, a: 1}
+      key1: {r: 0, g: 0, b: 0.7319846, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -233,7 +235,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!114 &2020463650089097002
 MonoBehaviour:
@@ -247,8 +249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51eec8335a44714487fec0f1b8b35da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxForceX: 0
-  _maxForceY: 0
+  _maxForceX: 250
+  _maxForceY: 250
+  _forceMultiplier: 10
 --- !u!114 &6961595339872301466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,3 +264,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e23dfeabd44e9d4c80e1581dce5cfb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2117683421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4285446353096740859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e855abf50f93dcb45b796c42ef1f64a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2117683422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4285446353096740859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3af42b9ecce0c43870157a1104254c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interface: {fileID: 0}
