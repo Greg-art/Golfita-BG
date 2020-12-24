@@ -565,7 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240e28e89d15283478d8b3e0d16b11d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parList: 030000000700000005000000
+  _parList: 030000000100000005000000
   ScoreName: 
   TotalScore: 0
   CurrentScenePar: -1

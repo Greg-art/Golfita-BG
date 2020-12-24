@@ -30,9 +30,9 @@ public class Interface : MonoBehaviour
         _scoreDisplay.SetText($"Pontuação Total: {totalScore}");
     }
 
-    public void UpdateShotNameDisplay(int score)
+    public void UpdateShotNameDisplay(string scoreName)
     {
-        _shotNameDisplay.SetText($"ALBATROZ");
+        _shotNameDisplay.SetText(scoreName);
     }
 
     public void UpdateParDisplay(int par)

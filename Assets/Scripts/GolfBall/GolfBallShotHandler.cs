@@ -22,7 +22,7 @@ public class GolfBallShotHandler : MonoBehaviour
     public void RegisterShotAmount()
     {
         ScoreManager.Instance.GetLevelScore(_currentTotalShots);
-        _interface.UpdateShotNameDisplay(_currentTotalShots);
+        _interface.UpdateShotNameDisplay(ScoreManager.Instance.ScoreName);
         _interface.UpdateScoreDisplay(ScoreManager.Instance.TotalScore);
     }
 }
