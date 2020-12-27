@@ -7,13 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: 
-    guid: 8e8ee6caaf386d34aa9eed373077ff47
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: ef6f98cb9050f1d4da10e5841e9bdc4f
-  - enabled: 1
-    path: Assets/Scenes/Fase Teste.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Fase 1.unity
     guid: 6807186370bbc1e4d8be24d7f08c8e02
@@ -26,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase 4.unity
     guid: dbf19b58461138d4290076bc76888b45
+  - enabled: 1
+    path: Assets/Scenes/Fase Teste.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
