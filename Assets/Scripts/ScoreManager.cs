@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private int[] _parList; //inicialmente com 4
-
     private int _currentScore;
     private int _currentHighScore = 0;
     private int _currentSceneIndex;

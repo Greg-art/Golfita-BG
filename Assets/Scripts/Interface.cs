@@ -11,7 +11,7 @@ public class Interface : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _parDisplay = default;
     [SerializeField] private TextMeshProUGUI _shotsDisplay = default;
     [SerializeField] private TextMeshProUGUI _shotNameDisplay = default;
-    [SerializeField] private Image imagem = default;
+
 
 
     void Start()
@@ -33,6 +33,7 @@ public class Interface : MonoBehaviour
     public void UpdateShotNameDisplay(string scoreName)
     {
         _shotNameDisplay.SetText(scoreName);
+
     }
 
     public void UpdateParDisplay(int par)

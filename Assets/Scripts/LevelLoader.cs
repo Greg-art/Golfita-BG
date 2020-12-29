@@ -6,20 +6,27 @@ using UnityEngine.UI;
 
 public class LevelLoader : MonoBehaviour
 {
+    [SerializeField] private UIAnimator _uiAnimator;
     public Animator transition;
 
-
-    public void ChangeScene(){
-        StartCoroutine( LoadLevel("Fase Teste")) ;
+    public void passTheStage(){ 
+        _uiAnimator.playAnimation();
+        StartCoroutine( LoadLevel() );
     }
 
-    IEnumerator LoadLevel(string levelName){
+    public void changeScene(){ 
+        StartCoroutine( LoadLevel() );
+    }
+    IEnumerator LoadLevel(){
+        if (SceneManager.GetActiveScene().buildIndex != 0){
+            yield return new WaitForSeconds(1.9f);
+        }
 
         transition.SetTrigger("Start");
 
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene(levelName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
 
     }
