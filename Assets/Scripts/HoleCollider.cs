@@ -11,7 +11,8 @@ public class HoleCollider : MonoBehaviour
         {
             GolfBallShotHandler shotHandler = other.GetComponent<GolfBallShotHandler>();
             shotHandler.RegisterShotAmount();
-            _levelLoader.passSheStage();
+            _levelLoader.passTheStage();
+
         }
     }
 }

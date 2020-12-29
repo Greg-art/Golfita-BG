@@ -6,7 +6,7 @@ using TMPro;
 
 public class UIAnimator : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI _clique;
+    [SerializeField] TextMeshProUGUI _clique = default;
     void Start()
     {
         LeanTween.moveLocal(gameObject, new Vector3(18000, 750, 0), 0f);
