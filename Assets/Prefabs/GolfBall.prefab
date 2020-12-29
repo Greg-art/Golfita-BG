@@ -123,14 +123,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4285446353096740859}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!120 &4285446353096740858
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -203,8 +203,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0.7319846, a: 1}
-      key1: {r: 0, g: 0, b: 0.7319846, a: 1}
+      key0: {r: 0.13995194, g: 0.49951953, b: 0.8018868, a: 1}
+      key1: {r: 0, g: 0.09038353, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxForceX: 250
   _maxForceY: 250
-  _forceMultiplier: 10
+  _forceMultiplier: 20
 --- !u!114 &6961595339872301466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4285446353096740859}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e855abf50f93dcb45b796c42ef1f64a2, type: 3}
   m_Name: 
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4285446353096740859}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2f24945a21f3cc4baa7e89428b5b166, type: 3}
   m_Name: 

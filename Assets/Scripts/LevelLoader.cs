@@ -6,19 +6,23 @@ using UnityEngine.UI;
 
 public class LevelLoader : MonoBehaviour
 {
-    [SerializeField] private UIAnimator _uiAnimator;
     public Animator transition;
+    public bool loadNextLevel = true;
 
-    public void passTheStage(){ 
-        _uiAnimator.playAnimation();
-        StartCoroutine( LoadLevel() );
+    public void LoadNextScene(){ 
+        StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1) );
     }
 
-    public void changeScene(){ 
-        StartCoroutine( LoadLevel() );
+    public void RestartScene(){ 
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
     }
-    IEnumerator LoadLevel(){
-        if (SceneManager.GetActiveScene().buildIndex != 0){
+
+    public void LoadExpecificSceneByIndex(int index){
+        StartCoroutine(LoadLevel(index));
+    }
+
+    IEnumerator LoadLevel(int index){
+        if ( SceneManager.GetActiveScene().buildIndex != 0){
             yield return new WaitForSeconds(1.9f);
         }
 
@@ -26,20 +30,10 @@ public class LevelLoader : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(index);
 
     }
 
-    public void RestartScene(){ 
-        StartCoroutine(ResetScene());
-    }
-    IEnumerator ResetScene(){
 
-        transition.SetTrigger("Start");
 
-        yield return new WaitForSeconds(1);
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-    }
 }

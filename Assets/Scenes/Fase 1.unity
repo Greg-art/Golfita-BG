@@ -376,7 +376,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563279733}
-  m_LocalRotation: {x: 0.21256788, y: -0.008071458, z: 0.0017559234, w: 0.9771114}
+  m_LocalRotation: {x: 0.21256788, y: -0.0080719, z: 0.0017560197, w: 0.9771114}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -782,7 +782,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.202615, y: -0.007572363, z: 0.0015668202, w: 0.97922796}
+  m_LocalRotation: {x: 0.202615, y: -0.007572581, z: 0.0015668652, w: 0.97922796}
   m_LocalPosition: {x: 0.023826152, y: 5.3085866, z: -1.6134529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -876,6 +876,11 @@ PrefabInstance:
       propertyPath: _levelLoader
       value: 
       objectReference: {fileID: 1105421741}
+    - target: {fileID: 46207501596590489, guid: 1ad83ea4c5f895045ada413d015cd1f3,
+        type: 3}
+      propertyPath: _uiAnimator
+      value: 
+      objectReference: {fileID: 1322334193}
     - target: {fileID: 8579327177600183574, guid: 1ad83ea4c5f895045ada413d015cd1f3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1016,7 +1021,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347077990}
-  m_LocalRotation: {x: 0.21377179, y: -0.0072105103, z: 0.0015779237, w: 0.97685575}
+  m_LocalRotation: {x: 0.21377179, y: -0.0072104936, z: 0.0015779199, w: 0.97685575}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1090,7 +1095,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356062202}
-  m_LocalRotation: {x: 0.19596793, y: -0.007237993, z: 0.0014465018, w: 0.98058254}
+  m_LocalRotation: {x: 0.19596793, y: -0.0072380267, z: 0.0014465087, w: 0.98058254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1509,14 +1514,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2117683421, guid: 101cea4f56fdcaa48927c16a0e6ba29e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2117683422, guid: 101cea4f56fdcaa48927c16a0e6ba29e, type: 3}
       propertyPath: _interface
       value: 
       objectReference: {fileID: 1064354512}
+    - target: {fileID: 2020463650089097002, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
+        type: 3}
+      propertyPath: _forceMultiplier
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 4285446353096740852, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1572,15 +1578,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4285446353096740857, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4285446353096740859, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}
       propertyPath: m_Name
       value: GolfBall
-      objectReference: {fileID: 0}
-    - target: {fileID: 6480680974759384537, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 101cea4f56fdcaa48927c16a0e6ba29e, type: 3}
