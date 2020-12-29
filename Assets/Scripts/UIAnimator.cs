@@ -7,6 +7,7 @@ using TMPro;
 public class UIAnimator : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _clique = default;
+    public bool animationIsHappening = false;
     void Start()
     {
         LeanTween.moveLocal(gameObject, new Vector3(18000, 750, 0), 0f);
@@ -24,7 +25,7 @@ public class UIAnimator : MonoBehaviour
 
     IEnumerator Anima()
     {
-
+        animationIsHappening = true;
         LeanTween.moveLocal(gameObject, new Vector3(0, 750, 0), 0.5f);
         _clique.enabled = false;
 
@@ -43,6 +44,7 @@ public class UIAnimator : MonoBehaviour
         _clique.enabled = true;
         LeanTween.scaleX(_clique.gameObject, 1f, 0.2f);
         LeanTween.scaleY(_clique.gameObject, 1f, 0.2f);
-
+        yield return new WaitForSeconds(0.2f);
+        animationIsHappening = false;
     }
 }

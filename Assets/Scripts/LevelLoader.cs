@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
-    public bool loadNextLevel = true;
+    public UIAnimator _uiAnimator = default;
+ 
 
     public void LoadNextScene(){ 
         StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1) );
@@ -22,7 +23,7 @@ public class LevelLoader : MonoBehaviour
     }
 
     IEnumerator LoadLevel(int index){
-        if ( SceneManager.GetActiveScene().buildIndex != 0){
+        if ( _uiAnimator.animationIsHappening ){
             yield return new WaitForSeconds(1.9f);
         }
 
