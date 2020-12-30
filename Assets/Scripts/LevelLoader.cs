@@ -7,23 +7,28 @@ using UnityEngine.UI;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
-    public UIAnimator _uiAnimator = default;
- 
+    public UIAnimator _uiAnimator;
 
-    public void LoadNextScene(){ 
-        StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1) );
+
+    public void LoadNextScene()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    public void RestartScene(){ 
+    public void RestartScene()
+    {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
     }
 
-    public void LoadExpecificSceneByIndex(int index){
+    public void LoadExpecificSceneByIndex(int index)
+    {
         StartCoroutine(LoadLevel(index));
     }
 
-    IEnumerator LoadLevel(int index){
-        if ( _uiAnimator.animationIsHappening ){
+    IEnumerator LoadLevel(int index)
+    {
+        if (_uiAnimator != null && _uiAnimator.animationIsHappening)
+        {
             yield return new WaitForSeconds(1.9f);
         }
 
