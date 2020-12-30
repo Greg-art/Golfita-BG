@@ -143,7 +143,7 @@ PrefabInstance:
     - target: {fileID: 5702509492201590480, guid: f178cb01efb089f419dd6066ed4ce6fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -100
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 5702509492201590480, guid: f178cb01efb089f419dd6066ed4ce6fa,
         type: 3}
@@ -588,7 +588,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777281216}
-  m_LocalRotation: {x: 0.21374497, y: -0.017080395, z: 0.0037378164, w: 0.976733}
+  m_LocalRotation: {x: 0.21374495, y: -0.017080367, z: 0.0037378096, w: 0.976733}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -709,7 +709,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843597556}
-  m_LocalRotation: {x: 0.2125393, y: -0.017943043, z: 0.0039034602, w: 0.97698}
+  m_LocalRotation: {x: 0.2125393, y: -0.017944308, z: 0.0039037347, w: 0.97698}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -942,6 +942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clique: {fileID: 0}
+  animationIsHappening: 0
 --- !u!1001 &1630806614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1295,7 +1296,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026722233}
-  m_LocalRotation: {x: 0.20258884, y: -0.017465893, z: 0.0036139204, w: 0.9791015}
+  m_LocalRotation: {x: 0.20258886, y: -0.017466402, z: 0.0036140254, w: 0.9791015}
   m_LocalPosition: {x: 0.5064517, y: 7.1085863, z: -22.846174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
