@@ -12,14 +12,13 @@ GameObject:
   - component: {fileID: 4285446353096740853}
   - component: {fileID: 4285446353096740854}
   - component: {fileID: 4285446353096740855}
-  - component: {fileID: 4285446353096740856}
   - component: {fileID: 4285446353096740857}
   - component: {fileID: 4285446353096740858}
+  - component: {fileID: 4285446353096740856}
   - component: {fileID: 2020463650089097002}
   - component: {fileID: 6961595339872301466}
   - component: {fileID: 2117683421}
   - component: {fileID: 2117683422}
-  - component: {fileID: 6480680974759384537}
   m_Layer: 0
   m_Name: GolfBall
   m_TagString: Untagged
@@ -103,18 +102,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4285446353096740856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4285446353096740859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f24945a21f3cc4baa7e89428b5b166, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &4285446353096740857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -238,6 +225,18 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &4285446353096740856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4285446353096740859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f24945a21f3cc4baa7e89428b5b166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2020463650089097002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,15 +289,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interface: {fileID: 0}
---- !u!114 &6480680974759384537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4285446353096740859}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f24945a21f3cc4baa7e89428b5b166, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
