@@ -1018,6 +1018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelLoader: {fileID: 0}
+  _uiAnimator: {fileID: 0}
 --- !u!1001 &4906485720479137931
 PrefabInstance:
   m_ObjectHideFlags: 0
