@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
-    [SerializeField] private LevelLoader _levelLoader = default;
+
+    private Vector3 lastStop;
+
+    void Start(){
+        lastStop = new Vector3(0,0,0);
+    }
+
     private void OnTriggerEnter(Collider other){
         Debug.Log("trigger");
         if (other.GetComponent<GolfBallShotHandler>() != null)
             Debug.Log("trigger2");
-            _levelLoader.RestartScene();
+            other.gameObject.GetComponent<Rigidbody>().position = lastStop;
 
+    }
+
+    public void setLastStop(Vector3 position){
+        lastStop = new Vector3(position.x,position.y,position.z);
     }
 
 }

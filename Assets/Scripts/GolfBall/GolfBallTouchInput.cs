@@ -8,6 +8,8 @@ public class GolfBallTouchInput : MonoBehaviour
     private Vector2 _lastTouchPosition;
     private GolfBallForceHandler _forceHandler;
     private GolfBallLineRenderer _lineRenderer;
+    [SerializeField] private Destroyer _destroyer;
+    private Rigidbody rig;
 
     void Start()
     {
@@ -18,34 +20,40 @@ public class GolfBallTouchInput : MonoBehaviour
     void Update()
     {
         int currentTouch;
-        for (currentTouch = 0; currentTouch < Input.touchCount; currentTouch++)
+        rig = GetComponent<Rigidbody>();
+        if ((rig.velocity.x < 0.1f && rig.velocity.x > -0.1f) && (rig.velocity.y < 0.1f && rig.velocity.y > -0.1f) && (rig.velocity.z < 0.1f && rig.velocity.z > -0.1f) )
         {
-            Touch touch = Input.GetTouch(currentTouch);
-            if (touch.phase == TouchPhase.Began)
+            _destroyer.setLastStop(GetComponent<Rigidbody>().position); 
+            for (currentTouch = 0; currentTouch < Input.touchCount; currentTouch++)
             {
-                _initialTouchPosition = touch.position;
-                _lastTouchPosition = touch.position;
+                Touch touch = Input.GetTouch(currentTouch);
+                if (touch.phase == TouchPhase.Began)
+                {
+                    _initialTouchPosition = touch.position;
+                    _lastTouchPosition = touch.position;
 
-                _forceHandler.SetForces(0, 0);
+                    _forceHandler.SetForces(0, 0);
 
-                _lineRenderer.StartLine();
+                    _lineRenderer.StartLine();
 
-            }
-            else if (touch.phase == TouchPhase.Moved)
-            {
-                _lastTouchPosition = touch.position;
+                }
+                else if (touch.phase == TouchPhase.Moved)
+                {
+                    _lastTouchPosition = touch.position;
 
-                float newForceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 1f;
-                float newForceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 1f;
-                _forceHandler.SetForces(newForceX, newForceY);
+                    float newForceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 1f;
+                    float newForceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 1f;
+                    _forceHandler.SetForces(newForceX, newForceY);
 
-                _lineRenderer.UpdateLinePoint(newForceX, newForceY);
-            }
-            else if (touch.phase == TouchPhase.Ended)
-            {
-                _forceHandler.ApplyForce();
-                _lineRenderer.SetRendererActive(false);
-            }
+                    _lineRenderer.UpdateLinePoint(newForceX, newForceY);
+                }
+                else if (touch.phase == TouchPhase.Ended)
+                {
+                    _forceHandler.ApplyForce();
+                    _lineRenderer.SetRendererActive(false);
+                }
+            }    
         }
+        
     }
 }

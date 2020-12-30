@@ -197,6 +197,18 @@ PrefabInstance:
       objectReference: {fileID: 1630806615}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f178cb01efb089f419dd6066ed4ce6fa, type: 3}
+--- !u!114 &334626033 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8475083628379997509, guid: f178cb01efb089f419dd6066ed4ce6fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 334626032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3835aec8ea192144488989242cdd2961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &386507407
 GameObject:
   m_ObjectHideFlags: 3
@@ -788,7 +800,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843597556}
-  m_LocalRotation: {x: 0.2125393, y: -0.01794287, z: 0.0039034216, w: 0.97698}
+  m_LocalRotation: {x: 0.2125393, y: -0.017943585, z: 0.003903578, w: 0.97698}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1355,7 +1367,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026722233}
-  m_LocalRotation: {x: 0.20258884, y: -0.017465824, z: 0.0036139062, w: 0.9791015}
+  m_LocalRotation: {x: 0.20258884, y: -0.017466111, z: 0.0036139654, w: 0.9791015}
   m_LocalPosition: {x: 0.5064517, y: 7.1085863, z: -22.846174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1589,6 +1601,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2117683421, guid: 101cea4f56fdcaa48927c16a0e6ba29e, type: 3}
+      propertyPath: _destroyer
+      value: 
+      objectReference: {fileID: 334626033}
     - target: {fileID: 2117683422, guid: 101cea4f56fdcaa48927c16a0e6ba29e, type: 3}
       propertyPath: _interface
       value: 
@@ -1648,6 +1664,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4285446353096740856, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
+        type: 3}
+      propertyPath: _destroyer
+      value: 
+      objectReference: {fileID: 334626033}
     - target: {fileID: 4285446353096740859, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}
       propertyPath: m_Name
