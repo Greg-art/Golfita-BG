@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 233859463}
   - component: {fileID: 1322334195}
   - component: {fileID: 1212559723908633562}
+  - component: {fileID: 3921087833153204275}
   m_Layer: 0
-  m_Name: NomeTacada
+  m_Name: TacadaAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clique: {fileID: 1619307819}
+  animationIsHappening: 0
 --- !u!114 &1212559723908633562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +165,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clique: {fileID: 1619307819}
+  animationIsHappening: 0
+--- !u!114 &3921087833153204275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233859461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed78821484883d40bf219762da5b270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clique: {fileID: 0}
+  animationIsHappening: 0
 --- !u!1 &1619307817
 GameObject:
   m_ObjectHideFlags: 0
