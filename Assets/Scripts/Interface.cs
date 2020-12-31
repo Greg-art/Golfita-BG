@@ -17,6 +17,7 @@ public class Interface : MonoBehaviour
 
     void Start()
     {
+        ScoreManager.Instance.SetupLevel();
         UpdateScoreDisplay(ScoreManager.Instance.TotalScore);
         UpdateParDisplay(ScoreManager.Instance.CurrentScenePar);
     }
@@ -39,6 +40,7 @@ public class Interface : MonoBehaviour
 
     public void UpdateParDisplay(int par)
     {
+
         _parDisplay.SetText($"Par: {par}");
     }
 

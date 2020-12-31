@@ -376,7 +376,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563279733}
-  m_LocalRotation: {x: 0.21256788, y: -0.008070895, z: 0.0017558009, w: 0.9771114}
+  m_LocalRotation: {x: 0.2125651, y: -0.009501889, z: 0.0020671096, w: 0.9770986}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -642,7 +642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765772852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.023826152, y: 5.3085866, z: -1.6134529}
+  m_LocalPosition: {x: 0.023826152, y: 1.9785867, z: -1.6134529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1347077992}
@@ -695,13 +695,13 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.26666668, g: 0.60784316, b: 0.81960785, a: 0}
-  m_projectionMatrixMode: 1
+  m_BackGroundColor: {r: 0.1981132, g: 0.5648334, b: 0.7924528, a: 0}
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 20.78461
+  m_FocalLength: 32.96973
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -735,8 +735,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.202615, y: -0.0075721783, z: 0.0015667819, w: 0.979228}
-  m_LocalPosition: {x: 0.023826152, y: 5.3085866, z: -1.6134529}
+  m_LocalRotation: {x: 0.20261402, y: -0.008145818, z: 0.0016854752, w: 0.97922343}
+  m_LocalPosition: {x: 0.023826152, y: 1.9785867, z: -1.6134529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1568,7 +1568,7 @@ PrefabInstance:
     - target: {fileID: 4285446353096740852, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.35
+      value: -4.68
       objectReference: {fileID: 0}
     - target: {fileID: 4285446353096740852, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}
@@ -1625,11 +1625,6 @@ PrefabInstance:
       propertyPath: _interface
       value: 
       objectReference: {fileID: 1064354512}
-    - target: {fileID: 4285446353096740857, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4285446353096740859, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}
       propertyPath: m_Name

@@ -33,11 +33,12 @@ public class ScoreManager : MonoBehaviour
         _currentHighScore = PlayerPrefs.GetInt("highScore", 0);
     }
 
-    private void SetupLevel()
+    public void SetupLevel()
     {
         ScoreManager.Instance._currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         CurrentScenePar = _parList[_currentSceneIndex];
     }
+
 
     public void GetLevelScore(int shotAmount)
     {

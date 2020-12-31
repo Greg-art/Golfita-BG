@@ -12,9 +12,7 @@ public class Destroyer : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-        Debug.Log("trigger");
         if (other.GetComponent<GolfBallShotHandler>() != null)
-            Debug.Log("trigger2");
             other.gameObject.GetComponent<Rigidbody>().position = lastStop;
 
     }
