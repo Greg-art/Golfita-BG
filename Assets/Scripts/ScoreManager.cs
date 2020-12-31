@@ -30,7 +30,7 @@ public class ScoreManager : MonoBehaviour
             SetupLevel();
         }
 
-        _currentHighScore = PlayerPrefs.GetInt("highScore", 0);
+        _currentHighScore = PlayerPrefs.GetInt("highScore", 999);
     }
 
     public void SetupLevel()
