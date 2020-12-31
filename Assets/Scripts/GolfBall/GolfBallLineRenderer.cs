@@ -9,7 +9,7 @@ public class GolfBallLineRenderer : MonoBehaviour
 
     void Awake()
     {
-        _lineRenderer = GetComponentInChildren<LineRenderer>();
+        _lineRenderer = GetComponent<LineRenderer>();
         _lineRenderer.enabled = false;
 
         _camera = Camera.main;
