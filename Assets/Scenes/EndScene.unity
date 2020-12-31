@@ -614,7 +614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'pontos: 0'
+  m_text: 'Pontos: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 756fd966f129b2543ad6f7614eb389c6, type: 2}
   m_sharedMaterial: {fileID: 8175513880778008666, guid: 756fd966f129b2543ad6f7614eb389c6,
