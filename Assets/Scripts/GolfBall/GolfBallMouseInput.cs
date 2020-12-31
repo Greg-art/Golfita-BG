@@ -7,11 +7,13 @@ public class GolfBallMouseInput : MonoBehaviour
 
     private Vector2 _initialTouchPosition;
     private Vector2 _lastTouchPosition;
+    private Rigidbody rig;
     private GolfBallForceHandler _forceHandler;
     private GolfBallLineRenderer _lineRenderer;
     private GolfBallShotHandler _shotHandler;
     [SerializeField] private Destroyer _destroyer;
-    private Rigidbody rig;
+    [SerializeField] private Interface _interface = default;
+
 
     void Start()
     {
@@ -22,9 +24,13 @@ public class GolfBallMouseInput : MonoBehaviour
 
     void Update()
     {
+        _interface.HideVaiDisplay();
+
         rig = GetComponent<Rigidbody>();
         if ((rig.velocity.x < 0.1f && rig.velocity.x > -0.1f) && (rig.velocity.y < 0.1f && rig.velocity.y > -0.1f) && (rig.velocity.z < 0.1f && rig.velocity.z > -0.1f))
         {
+            _interface.ShowVaiDisplay();
+
             _destroyer.setLastStop(GetComponent<Rigidbody>().position);
 
             if (Input.GetMouseButtonDown(0))

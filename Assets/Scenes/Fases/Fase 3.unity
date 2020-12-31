@@ -1653,6 +1653,10 @@ PrefabInstance:
       propertyPath: _destroyer
       value: 
       objectReference: {fileID: 191733880}
+    - target: {fileID: 2117683421, guid: 101cea4f56fdcaa48927c16a0e6ba29e, type: 3}
+      propertyPath: _interface
+      value: 
+      objectReference: {fileID: 650047905}
     - target: {fileID: 2117683422, guid: 101cea4f56fdcaa48927c16a0e6ba29e, type: 3}
       propertyPath: _interface
       value: 
@@ -1717,6 +1721,11 @@ PrefabInstance:
       propertyPath: _destroyer
       value: 
       objectReference: {fileID: 191733880}
+    - target: {fileID: 4285446353096740856, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
+        type: 3}
+      propertyPath: _interface
+      value: 
+      objectReference: {fileID: 650047905}
     - target: {fileID: 4285446353096740859, guid: 101cea4f56fdcaa48927c16a0e6ba29e,
         type: 3}
       propertyPath: m_Name

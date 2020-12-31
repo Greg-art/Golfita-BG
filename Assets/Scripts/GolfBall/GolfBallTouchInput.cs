@@ -6,10 +6,12 @@ public class GolfBallTouchInput : MonoBehaviour
 {
     private Vector2 _initialTouchPosition;
     private Vector2 _lastTouchPosition;
+    private Rigidbody rig;
     private GolfBallForceHandler _forceHandler;
     private GolfBallLineRenderer _lineRenderer;
     [SerializeField] private Destroyer _destroyer;
-    private Rigidbody rig;
+    [SerializeField] private Interface _interface = default;
+
 
     void Start()
     {
@@ -19,10 +21,13 @@ public class GolfBallTouchInput : MonoBehaviour
 
     void Update()
     {
+        _interface.HideVaiDisplay();
         int currentTouch;
         rig = GetComponent<Rigidbody>();
         if ((rig.velocity.x < 0.1f && rig.velocity.x > -0.1f) && (rig.velocity.y < 0.1f && rig.velocity.y > -0.1f) && (rig.velocity.z < 0.1f && rig.velocity.z > -0.1f) )
         {
+            _interface.ShowVaiDisplay();
+
             _destroyer.setLastStop(GetComponent<Rigidbody>().position); 
             for (currentTouch = 0; currentTouch < Input.touchCount; currentTouch++)
             {

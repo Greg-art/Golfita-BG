@@ -11,6 +11,7 @@ public class Interface : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _parDisplay = default;
     [SerializeField] private TextMeshProUGUI _shotsDisplay = default;
     [SerializeField] private TextMeshProUGUI _shotNameDisplay = default;
+    [SerializeField] private TextMeshProUGUI _vaiDisplay = default;
 
 
 
@@ -39,5 +40,15 @@ public class Interface : MonoBehaviour
     public void UpdateParDisplay(int par)
     {
         _parDisplay.SetText($"Par: {par}");
+    }
+
+    public void ShowVaiDisplay()
+    {
+        _vaiDisplay.enabled = true;
+    }
+    public void HideVaiDisplay()
+    {
+        _vaiDisplay.enabled = false;
+
     }
 }
