@@ -8,10 +8,12 @@ public class GolfBallForceHandler : MonoBehaviour
     [SerializeField] private float _forceMultiplier = 10f;
     private float _forceX, _forceY = 10f;
     private Rigidbody _rigidbody;
+    private Camera _camera;
 
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _camera = Camera.main;
     }
 
     public void SetForces(float newX, float newY)
@@ -21,19 +23,20 @@ public class GolfBallForceHandler : MonoBehaviour
 
         if (newX > _maxForceX)
             _forceX = _maxForceX;
-        else if(newX < (_maxForceX * -1))
+        else if (newX < (_maxForceX * -1))
             _forceX = _maxForceX * -1;
 
         if (newY > _maxForceY)
             _forceY = _maxForceY;
-        else if(newY < (_maxForceY * -1))
+        else if (newY < (_maxForceY * -1))
             _forceY = _maxForceY;
-        
+
     }
 
     public void ApplyForce()
     {
-        Vector3 forceToApply = new Vector3(_forceX * _forceMultiplier , 0, _forceY * _forceMultiplier);
-        _rigidbody.AddForce(forceToApply);
+        Vector3 inputForce = new Vector3(_forceX, 0, _forceY);
+        Vector3 forceToApply = _camera.transform.TransformDirection(inputForce);
+        _rigidbody.AddForce(forceToApply * _forceMultiplier);
     }
 }

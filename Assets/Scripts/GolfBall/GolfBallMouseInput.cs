@@ -56,8 +56,13 @@ public class GolfBallMouseInput : MonoBehaviour
                 _shotHandler.UpdateShotAmount();
             }
         }
+        else if (Input.GetMouseButton(0))
+        {
+            _lastTouchPosition = Input.mousePosition;
 
-        
+            float newForceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 1f;
+            float newForceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 1f;
+            _forceHandler.SetForces(newForceX, newForceY);
     }
 
 }
