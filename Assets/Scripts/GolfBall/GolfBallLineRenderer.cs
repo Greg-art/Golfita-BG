@@ -5,11 +5,14 @@ using UnityEngine;
 public class GolfBallLineRenderer : MonoBehaviour
 {
     private LineRenderer _lineRenderer;
+    private Camera _camera;
 
     void Awake()
     {
-        _lineRenderer = GetComponent<LineRenderer>();
+        _lineRenderer = GetComponentInChildren<LineRenderer>();
         _lineRenderer.enabled = false;
+
+        _camera = Camera.main;
     }
     public void StartLine()
     {
@@ -18,9 +21,10 @@ public class GolfBallLineRenderer : MonoBehaviour
         _lineRenderer.SetPosition(1, transform.position);
     }
 
-    public void UpdateLinePoint(float forceX, float forceY)
+    public void UpdateLinePoint(Vector2 forces)
     {
-        Vector3 newLinePoint = new Vector3(transform.position.x + forceX, transform.position.y, transform.position.z + forceY);
+        Vector3 forceToApply = _camera.transform.TransformDirection(new Vector3(forces.x, 0, forces.y));
+        Vector3 newLinePoint = new Vector3(transform.position.x + forceToApply.x, transform.position.y, transform.position.z + forceToApply.z);
         _lineRenderer.SetPosition(1, newLinePoint);
     }
 

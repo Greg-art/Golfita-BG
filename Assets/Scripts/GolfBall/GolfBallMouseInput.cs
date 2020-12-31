@@ -30,7 +30,7 @@ public class GolfBallMouseInput : MonoBehaviour
         if ((rig.velocity.x < 0.2f && rig.velocity.x > -0.2f) && (rig.velocity.y < 0.2f && rig.velocity.y > -0.2f) && (rig.velocity.z < 0.2f && rig.velocity.z > -0.2f))
         {
             // rig.constraints = RigidbodyConstraints.FreezePosition;
-            rig.velocity = new Vector3(0,0,0);
+            rig.velocity = new Vector3(0, 0, 0);
             _interface.ShowVaiDisplay();
             _destroyer.setLastStop(GetComponent<Rigidbody>().position);
 
@@ -50,11 +50,11 @@ public class GolfBallMouseInput : MonoBehaviour
 
                 float newForceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 1f;
                 float newForceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 1f;
-                _forceHandler.SetForces(newForceX, newForceY);
+                Vector2 newForces = _forceHandler.SetForces(newForceX, newForceY);
                 // Debug.Log(newForceX);
                 // Debug.Log(newForceY);
 
-                _lineRenderer.UpdateLinePoint(newForceX, newForceY);
+                _lineRenderer.UpdateLinePoint(newForces);
             }
             else if (Input.GetMouseButtonUp(0))
             {

@@ -16,7 +16,7 @@ public class GolfBallForceHandler : MonoBehaviour
         _camera = Camera.main;
     }
 
-    public void SetForces(float newX, float newY)
+    public Vector2 SetForces(float newX, float newY)
     {
         _forceX = newX;
         _forceY = newY;
@@ -31,6 +31,7 @@ public class GolfBallForceHandler : MonoBehaviour
         else if (newY < (_maxForceY * -1))
             _forceY = _maxForceY;
 
+        return new Vector2(_forceX, _forceY);
     }
 
     public void ApplyForce()

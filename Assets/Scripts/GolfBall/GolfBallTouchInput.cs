@@ -24,14 +24,14 @@ public class GolfBallTouchInput : MonoBehaviour
         _interface.HideVaiDisplay();
         int currentTouch;
         rig = GetComponent<Rigidbody>();
-        if ((rig.velocity.x < 0.2f && rig.velocity.x > -0.2f) && (rig.velocity.y < 0.2f && rig.velocity.y > -0.2f) && (rig.velocity.z < 0.2f && rig.velocity.z > -0.2f) )
+        if ((rig.velocity.x < 0.2f && rig.velocity.x > -0.2f) && (rig.velocity.y < 0.2f && rig.velocity.y > -0.2f) && (rig.velocity.z < 0.2f && rig.velocity.z > -0.2f))
         {
-            rig.velocity = new Vector3(0,0,0);
+            rig.velocity = new Vector3(0, 0, 0);
             _interface.ShowVaiDisplay();
 
             rig.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
 
-            _destroyer.setLastStop(GetComponent<Rigidbody>().position); 
+            _destroyer.setLastStop(GetComponent<Rigidbody>().position);
             for (currentTouch = 0; currentTouch < Input.touchCount; currentTouch++)
             {
                 Touch touch = Input.GetTouch(currentTouch);
@@ -51,17 +51,17 @@ public class GolfBallTouchInput : MonoBehaviour
 
                     float newForceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 1f;
                     float newForceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 1f;
-                    _forceHandler.SetForces(newForceX, newForceY);
+                    Vector2 newForces = _forceHandler.SetForces(newForceX, newForceY);
 
-                    _lineRenderer.UpdateLinePoint(newForceX, newForceY);
+                    _lineRenderer.UpdateLinePoint(newForces);
                 }
                 else if (touch.phase == TouchPhase.Ended)
                 {
                     _forceHandler.ApplyForce();
                     _lineRenderer.SetRendererActive(false);
                 }
-            }    
+            }
         }
-        
+
     }
 }
