@@ -24,9 +24,12 @@ public class GolfBallTouchInput : MonoBehaviour
         _interface.HideVaiDisplay();
         int currentTouch;
         rig = GetComponent<Rigidbody>();
-        if ((rig.velocity.x < 0.1f && rig.velocity.x > -0.1f) && (rig.velocity.y < 0.1f && rig.velocity.y > -0.1f) && (rig.velocity.z < 0.1f && rig.velocity.z > -0.1f) )
+        if ((rig.velocity.x < 0.2f && rig.velocity.x > -0.2f) && (rig.velocity.y < 0.2f && rig.velocity.y > -0.2f) && (rig.velocity.z < 0.2f && rig.velocity.z > -0.2f) )
         {
+            rig.velocity = new Vector3(0,0,0);
             _interface.ShowVaiDisplay();
+
+            rig.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
 
             _destroyer.setLastStop(GetComponent<Rigidbody>().position); 
             for (currentTouch = 0; currentTouch < Input.touchCount; currentTouch++)

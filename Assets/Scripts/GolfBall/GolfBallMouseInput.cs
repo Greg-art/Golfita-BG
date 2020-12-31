@@ -27,10 +27,11 @@ public class GolfBallMouseInput : MonoBehaviour
         _interface.HideVaiDisplay();
 
         rig = GetComponent<Rigidbody>();
-        if ((rig.velocity.x < 0.1f && rig.velocity.x > -0.1f) && (rig.velocity.y < 0.1f && rig.velocity.y > -0.1f) && (rig.velocity.z < 0.1f && rig.velocity.z > -0.1f))
+        if ((rig.velocity.x < 0.2f && rig.velocity.x > -0.2f) && (rig.velocity.y < 0.2f && rig.velocity.y > -0.2f) && (rig.velocity.z < 0.2f && rig.velocity.z > -0.2f))
         {
+            // rig.constraints = RigidbodyConstraints.FreezePosition;
+            rig.velocity = new Vector3(0,0,0);
             _interface.ShowVaiDisplay();
-
             _destroyer.setLastStop(GetComponent<Rigidbody>().position);
 
             if (Input.GetMouseButtonDown(0))
@@ -57,18 +58,12 @@ public class GolfBallMouseInput : MonoBehaviour
             }
             else if (Input.GetMouseButtonUp(0))
             {
+                // rig.constraints = RigidbodyConstraints.None;
+                // Debug.Log("none");
                 _forceHandler.ApplyForce();
                 _lineRenderer.SetRendererActive(false);
                 _shotHandler.UpdateShotAmount();
             }
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            _lastTouchPosition = Input.mousePosition;
-
-            float newForceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 1f;
-            float newForceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 1f;
-            _forceHandler.SetForces(newForceX, newForceY);
         }
     }
 }

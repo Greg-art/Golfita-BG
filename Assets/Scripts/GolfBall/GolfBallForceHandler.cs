@@ -37,6 +37,6 @@ public class GolfBallForceHandler : MonoBehaviour
     {
         Vector3 inputForce = new Vector3(_forceX, 0, _forceY);
         Vector3 forceToApply = _camera.transform.TransformDirection(inputForce);
-        _rigidbody.AddForce(forceToApply * _forceMultiplier);
+        _rigidbody.AddForce(new Vector3(forceToApply.x * _forceMultiplier, forceToApply.y * 0, forceToApply.z * _forceMultiplier));
     }
 }
