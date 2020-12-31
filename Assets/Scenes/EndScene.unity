@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 201919113}
   - component: {fileID: 201919115}
   - component: {fileID: 201919114}
+  - component: {fileID: 201919116}
   m_Layer: 5
   m_Name: TextHighScore
   m_TagString: Untagged
@@ -258,6 +259,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201919112}
   m_CullTransparentMesh: 0
+--- !u!114 &201919116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201919112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 812407cbfbc01cc4bb28ebbbe040bd99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &402857661
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +581,7 @@ GameObject:
   - component: {fileID: 496078788}
   - component: {fileID: 496078790}
   - component: {fileID: 496078789}
+  - component: {fileID: 496078791}
   m_Layer: 5
   m_Name: TextScore
   m_TagString: Untagged
@@ -692,6 +706,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496078787}
   m_CullTransparentMesh: 0
+--- !u!114 &496078791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496078787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aaf67da6bc3b1846b05b00aca39aace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &588045352
 GameObject:
   m_ObjectHideFlags: 0
