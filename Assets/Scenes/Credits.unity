@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030517578, y: 12}
+  m_AnchoredPosition: {x: -0.000040826195, y: 99}
   m_SizeDelta: {x: 10000, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &239141649
@@ -970,7 +970,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1315,11 +1315,11 @@ RectTransform:
   m_Father: {fileID: 1619714260}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -721}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 452.19604, y: 155.80597}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008433964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fonte (Sonsie One)
+  m_text: Desenvolvedores
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 756fd966f129b2543ad6f7614eb389c6, type: 2}
   m_sharedMaterial: {fileID: 8175513880778008666, guid: 756fd966f129b2543ad6f7614eb389c6,
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 14
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 0
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
