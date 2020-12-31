@@ -46,12 +46,6 @@ public class ScoreManager : MonoBehaviour
         TotalScore += _currentScore;
 
         ScoreName = GetScoreName(_currentScore);
-
-        if (_currentScore > _currentHighScore)
-        {
-            PlayerPrefs.SetInt("highScore", _currentScore);
-            _currentHighScore = _currentScore;
-        }
     }
 
     private string GetScoreName(int currentScore)
@@ -82,6 +76,15 @@ public class ScoreManager : MonoBehaviour
                 {
                     return "Triple Bogey";
                 }
+        }
+    }
+
+    public void SetHighScore()
+    {
+        if (TotalScore < _currentHighScore)
+        {
+            PlayerPrefs.SetInt("highScore", TotalScore);
+            _currentHighScore = TotalScore;
         }
     }
 }
