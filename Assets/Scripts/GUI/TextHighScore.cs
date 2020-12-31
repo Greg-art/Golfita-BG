@@ -9,6 +9,7 @@ public class TextHighScore : MonoBehaviour
 
     private void Awake()
     {
+        ScoreManager.Instance.SetHighScore();
         _highScoreText = GetComponent<TextMeshProUGUI>();
         _highScoreText.SetText($"Recorde: {PlayerPrefs.GetInt("highScore", 0)}");
     }
