@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GolfBallMouseInput : MonoBehaviour
 {
-    
+
     private Vector2 _initialTouchPosition;
     private Vector2 _lastTouchPosition;
     private GolfBallForceHandler _forceHandler;
@@ -23,9 +23,9 @@ public class GolfBallMouseInput : MonoBehaviour
     void Update()
     {
         rig = GetComponent<Rigidbody>();
-        if ((rig.velocity.x < 0.1f && rig.velocity.x > -0.1f) && (rig.velocity.y < 0.1f && rig.velocity.y > -0.1f) && (rig.velocity.z < 0.1f && rig.velocity.z > -0.1f) )
+        if ((rig.velocity.x < 0.1f && rig.velocity.x > -0.1f) && (rig.velocity.y < 0.1f && rig.velocity.y > -0.1f) && (rig.velocity.z < 0.1f && rig.velocity.z > -0.1f))
         {
-            _destroyer.setLastStop(GetComponent<Rigidbody>().position); 
+            _destroyer.setLastStop(GetComponent<Rigidbody>().position);
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -63,6 +63,6 @@ public class GolfBallMouseInput : MonoBehaviour
             float newForceX = (_initialTouchPosition.x - _lastTouchPosition.x) * 1f;
             float newForceY = (_initialTouchPosition.y - _lastTouchPosition.y) * 1f;
             _forceHandler.SetForces(newForceX, newForceY);
+        }
     }
-
 }
