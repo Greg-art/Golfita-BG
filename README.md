@@ -9,7 +9,7 @@ Golfita-BG trata-se de um jogo de minigolfe para Android desenvolvido pela GB-DE
 <a href="https://imgur.com/ptWArYg"><img height="400" src="https://i.imgur.com/ptWArYg.png" title="source: imgur.com" /></a>
 <a href="https://imgur.com/NIXEEd6"><img height="350" src="https://i.imgur.com/NIXEEd6.png" title="source: imgur.com" /></a>
 <a href="https://imgur.com/bV6rZZq"><img height="350" src="https://i.imgur.com/bV6rZZq.png" title="source: imgur.com" /></a>
-
+--
 ### Animações:
 
 Para criar a animação do nome da jogada que aparece após o player pontuar, foi utilizada a biblioteca LeanTween. Tal biblioteca visa facilitar a criação de animações e após usa-la nesse projeto, percebemos a agilidade e novas possibilidades que a mesma dispõe. Provavelmente usaremos novamente nos próximos jogos.
@@ -22,10 +22,7 @@ Para criar as fases foi utilizado o 3D Builder junto com objetos 3d simples do U
 
 ### Câmera
 
-Desenvolvedores:
-<strong>Bernardo Pires Mesko</strong>
-e
-<strong>Grégori Sabel</strong>
+--
 
 Desenvolvedores:
 <strong>Bernardo Pires Mesko</strong> 
