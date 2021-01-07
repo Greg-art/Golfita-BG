@@ -22,7 +22,7 @@ Para criar as fases foi utilizado o 3D Builder junto com objetos 3d simples do U
 
 ### Câmera
 
---
+---
 
 Desenvolvedores:
 <strong>Bernardo Pires Mesko</strong> 
