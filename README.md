@@ -18,10 +18,9 @@ Para criar a animação do nome da jogada que aparece após o player pontuar, fo
 
 Para criar as fases foi utilizado o 3D Builder junto com objetos 3d simples do Unity. 
 
-### Trabalhando com touch
-
 ### Câmera
 
+Para gerenciar a câmera usamos o módulo Cinemachine do Unity, que facilita bastante a criação de sistemas complexos de câmeras em ambientes 3D, porque criar nossos próprios scripts de câmera e fazer com que trabalhassem bem seria muito trabalhoso, e também pois já possuíamos alguma experiência trabalhando com o Cinemachine.
 ---
 
 Desenvolvedores:
