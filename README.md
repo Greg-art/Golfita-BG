@@ -2,7 +2,12 @@
 ## <strong> Jogo mobile de mini-golfe </strong> 
 
 
-Golfita-BG trata-se de um jogo de minigolfe para Android desenvolvido pela GB-DEV, no qual você possui várias pistas em 3D e deve dar o mínimo possível de tacadas na sua bolinha para fazer com que ela caia no buraco e passe para a próxima fase. Este jogo foi feito como o último projeto escolar para a matéria de programação para jogos, e seu desenvolvimento completo ocorreu dentro de um período de 2 semanas (de 17 a 31/12). 
+Golfita-BG trata-se de um jogo de minigolfe para Android desenvolvido pela GB-DEV, no qual você possui várias pistas em 3D e deve dar o mínimo possível de tacadas na sua bolinha para fazer com que ela caia no buraco e passe para a próxima fase. Este jogo foi feito como o último projeto escolar para a matéria de programação para jogos, e seu desenvolvimento completo ocorreu dentro de um período de 2 semanas (de 17 a 31/12).
+
+É possível baixar o arquivo .apk na página do jogo no Gamejolt ou Itch.io, e também assistir uma gameplay com comentários dos desenvolvedores no nosso canal no YouTube, no entanto lembre-se que o foco maior no desenvolvimento desse jogo foi aprender mais sobre o processo, e não necessariamente ter um produto final perfeito, portanto espere bugs.
+
+<strong>Links:</strong> Gamejolt - Itch.io - [GitHub](https://github.com/GregBerb-DEV/Golfita-BG) - [Vídeo de apresentação](https://www.youtube.com/watch?v=WIF7puhvXpE)
+
 
 ### Menu - Fase 3 - Fase 6
 
