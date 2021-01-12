@@ -35,3 +35,5 @@ Desenvolvedores:
 <strong>Bernardo Pires Mesko</strong> 
 e 
 <strong>Grégori Sabel</strong> 
+
+Desenvolvedores: <strong>[Bernardo Pires Mesko](https://github.com/Bemesko)</strong> e <strong>[Grégori Sabe](https://github.com/Greg-art)</strong>
