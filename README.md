@@ -6,7 +6,7 @@ Golfita-BG trata-se de um jogo de minigolfe para Android desenvolvido pela GB-DE
 
 É possível baixar o arquivo .apk na página do jogo no Gamejolt ou Itch.io, e também assistir uma gameplay com comentários dos desenvolvedores no nosso canal no YouTube, no entanto lembre-se que o foco maior no desenvolvimento desse jogo foi aprender mais sobre o processo, e não necessariamente ter um produto final perfeito, portanto espere bugs.
 
-<strong>Links:</strong> Gamejolt - Itch.io - [GitHub](https://github.com/GregBerb-DEV/Golfita-BG) - [Vídeo de apresentação](https://www.youtube.com/watch?v=WIF7puhvXpE)
+<strong>Links:</strong> [Gamejolt](https://gamejolt.com/games/golfita/573122) - [Itch.io](https://gb-dev.itch.io/golfita) - [GitHub](https://github.com/GregBerb-DEV/Golfita-BG) - [Vídeo de apresentação](https://www.youtube.com/watch?v=WIF7puhvXpE)
 
 
 ### Menu - Fase 3 - Fase 6
